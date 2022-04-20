@@ -11,13 +11,17 @@
         #principal{
             background-image: url('img/background-image.jpg');
         }
+
+        .product:nth-child(4){
+        margin-right:0;
+    }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <header id="nav">
         <nav id="navBar">
-            <h1 class="title">Street-Style</h1>
+            <h1 class="title white">Street-Style</h1>
 
             <ul id="navItens">
                 <li class="text">Produtos</li>
@@ -30,13 +34,13 @@
     <!-- Content -->
     <main>
         <!-- Central section -->
-        <section id="principal">
+        <section class="bigSection" id="principal">
             <div>
                 <header>
-                    <h1 class="title">Roupas de última moda!</h1>
+                    <h1 class="title white">Roupas de última moda!</h1>
                 </header>
                 <div>
-                    <a href="products" class="text">Ver produtos</a>
+                    <a href="products" class="text btnLink">Ver produtos</a>
                 </div>
             </div>
         </section>
@@ -46,7 +50,78 @@
         
         
         <section id="productList">
+            <header id="productListHeader">
+                <p class="strongFont title black">Produtos mais vendidos</p>
+            </header>
 
+            <div id="products">
+                <article class="product">
+                    <div class="productImage">
+                        <img src="" alt="Product image">
+                    </div>
+                    <header>
+                        <a href="product page" class="productName strongFont">[product name]</a>
+                    </header>
+                </article>
+                <article class="product">
+                    <div class="productImage">
+                        <img src="" alt="Product image">
+                    </div>
+                    <header>
+                        <a href="product page" class="productName strongFont">[product name]</a>
+                    </header>
+                </article>
+                <article class="product">
+                    <div class="productImage">
+                        <img src="" alt="Product image">
+                    </div>
+                    <header>
+                        <a href="product page" class="productName strongFont">[product name]</a>
+                    </header>
+                </article>
+                <article class="product">
+                    <div class="productImage">
+                        <img src="" alt="Product image">
+                    </div>
+                    <header>
+                        <a href="product page" class="productName strongFont">[product name]</a>
+                    </header>
+                </article>
+            </div>
+
+            <footer id="productListFooter">
+                <a href="" class="text btnLink" id="seeMore">Ver mais &rarr;</a>
+            </footer>
+        </section>
+
+
+        <!-- For all tastes -->
+
+        <section class="content">
+            <div id="teste">
+                <div class="contentText">
+                    <header>
+                        <h2 class="title">
+                            Para todos os gostos!
+                        </h2>
+                    </header>
+                    <article class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, laborum voluptatibus. Aut aperiam pariatur possimus, odit illum, quisquam delectus voluptate qui praesentium, sunt vel rem nobis laudantium? Iste, exercitationem! Nobis.</p>
+                    </article>
+                </div>
+                <div class="contentImage"></div>
+            </div>
+            
+        </section>
+
+        <!-- Sueter -->
+
+        <section class="bigSection">
+            <div>
+                <header>
+                    <h1 class="title">Para todos os gostos</h1>
+                </header>
+            </div>
         </section>
     </main>
 </body>
