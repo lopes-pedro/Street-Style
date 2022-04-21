@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="css/generalStyle.css">
     <title>Street Style</title>
     <style>
-        #principal{
-            background-image: url('img/background-image.jpg');
-        }
 
         .product:nth-child(4){
         margin-right:0;
@@ -23,10 +20,10 @@
         <nav id="navBar">
             <h1 class="title white">Street-Style</h1>
 
-            <ul id="navItens">
-                <li class="text">Produtos</li>
-                <li class="text">Carrinho</li>
-                <li class="text">Contato</li>
+            <ul class="itens">
+                <li class="text white bold">Produtos</li>
+                <li class="text white bold">Carrinho</li>
+                <li class="text white bold">Contato</li>
             </ul>
         </nav>
     </header>
@@ -34,7 +31,7 @@
     <!-- Content -->
     <main>
         <!-- Central section -->
-        <section class="bigSection" id="principal">
+        <section class="bigSection" id="principal" style="background-image: url('img/background-image.jpg');">
             <div>
                 <header>
                     <h1 class="title white">Roupas de última moda!</h1>
@@ -96,9 +93,9 @@
 
 
         <!-- For all tastes -->
-
-        <section class="content">
-            <div id="teste">
+        
+        <div class="background" style="background-color: red;">
+            <section class="content">
                 <div class="contentText">
                     <header>
                         <h2 class="title">
@@ -106,23 +103,53 @@
                         </h2>
                     </header>
                     <article class="text">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, laborum voluptatibus. Aut aperiam pariatur possimus, odit illum, quisquam delectus voluptate qui praesentium, sunt vel rem nobis laudantium? Iste, exercitationem! Nobis.</p>
+                        <p style="text-align:center;">Confira nosso catálogo</p>
                     </article>
                 </div>
-                <div class="contentImage"></div>
-            </div>
-            
-        </section>
+                <div class="models">
+                    <ul class="itens">
+                        <li class="text bold">Masculino</li>
+                        <li class="text bold ">Feminino</li>
+                        <li class="text bold">Moletom</li>
+                        <li class="text bold">Calças</li>
+                        <li class="text bold">Item</li>
+                        <li class="text bold">Item</li>
+                        <li class="text bold">Item</li>
+                        <li class="text bold">Item</li>
+                        <li class="text bold">Item</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
 
         <!-- Sueter -->
 
-        <section class="bigSection">
+        <section class="bigSection" style="background-image:url('img/background-cold.jpg'); background-position: center -300px;">
             <div>
                 <header>
-                    <h1 class="title">Para todos os gostos</h1>
+                    <h1 class="title white">O frio não vai nos segurar!</h1>
                 </header>
+                <div>
+                    <a href="products" class="text btnLink">Nossa variedade de moletons</a>
+                </div>
             </div>
         </section>
+
+        <!-- Footer -->
+
+        <div class="background" style="background-color: var(--darkBackground); min-height:50vh;">
+            <footer id="pageFooter">
+                <h1 class="title white">Street Style</h1>
+
+                <h2 class="title white">Contato</h2>
+                <ul>
+                    <li class="text white">@ledro.poles</li>
+                    <li class="text white">lopes-pedro</li>
+                </ul>
+            </footer>
+        </div>
     </main>
+
+    <script src="js/generalScript.js"></script>
 </body>
 </html>

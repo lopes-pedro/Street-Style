@@ -2,6 +2,7 @@
 
 :root{
     --darkBackground: #1f1f1f;
+    --darkBackgroundHalfTransparent: #1f1f1ffa;
     --darkBackgroundTransparent: #22222260;
     --lightBackground: #dbdbdb;
 
@@ -23,8 +24,51 @@
     
     font-size: 3em;
 }
+h2.title{
+    font-family: var(--titleFont);
+    
+    font-size: 2em;
+}
 .text{
     font-family: var(--textFont);
+}
+.bold{
+    font-weight: bold;
+}
+
+.background{
+    width: 100%;
+    padding:20px 0px 20px 0px;
+}
+
+/* Itens */
+
+.itens{
+    display: flex;
+
+    list-style: none;
+    
+    padding: 20px;
+    margin-left:5px;
+
+
+    font-weight: 300;
+}
+
+.itens > li{
+    padding:10px;
+    margin-left:10px;
+
+    border: 1px solid transparent;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+.itens > li:hover{
+    background-color:var(--lightBackgroundTransparent);
+    border: 1px solid var(--lightBackground);
+    border-radius: 3px;
 }
 
 /* Navbar */
@@ -32,6 +76,8 @@
 #nav{
     width: 100%;
     position:fixed;
+
+    transition:0.5s;
 
     /* background-image: linear-gradient(to top, white 5%, var(--darkBackground) 35%); */
 }
@@ -46,33 +92,8 @@
 
     color:black;
 }
-#navItens{
-    display: flex;
-
-    list-style: none;
-    
-    padding: 20px;
-    margin-left:5px;
 
 
-    font-weight: 300;
-}
-#navItens li {
-    padding:10px;
-    margin-left:10px;
-
-    border: 1px solid transparent;
-
-    transition: 0.3s;
-
-    cursor: pointer;
-    color:white;
-}
-#navItens > li:hover{
-    background-color:var(--lightBackgroundTransparent);
-    border: 1px solid var(--lightBackground);
-    border-radius: 3px;
-}
 
 /* Product List */
 #productList{
@@ -171,20 +192,13 @@
 /* Content */
 
 .content{
-    width: 100%;
-    min-height: 50vh;
-
-    
-    background-color:green;
-}
-.content > div {
     max-width: 1000px;
-    height: 50vh;
-    margin: 0 auto;
-    padding:0;
-    
+    margin:20px auto;
 
-    background-color:pink;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
 }
 
 .contentText{
@@ -195,4 +209,11 @@
     max-width: 40%;
     height: 50px;
     background-color: darkgreen;
+}
+
+/* Footer */
+
+#pageFooter{
+    max-width: 1000px;
+    margin: 0 auto;
 }
