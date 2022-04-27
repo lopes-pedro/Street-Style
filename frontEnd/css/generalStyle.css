@@ -3,7 +3,7 @@
 :root{
     --darkBackground: #1f1f1f;
     --darkBackgroundHalfTransparent: #1f1f1ffa;
-    --darkBackgroundTransparent: #22222260;
+    --darkBackgroundTransparent: #222222be;
     --lightBackground: #dbdbdb;
 
     --textFont: 'Roboto', sans-serif;
@@ -79,6 +79,8 @@ h2.title{
 
     transition:0.5s;
 
+    z-index: 4000;
+
     /* background-image: linear-gradient(to top, white 5%, var(--darkBackground) 35%); */
 }
 #navBar{
@@ -112,24 +114,32 @@ h2.title{
 }
 /* Products */
     .product{
-        width: 225px;
+        width: 240px;
         height:300px;
 
         margin-right:5px;
         background-color:red;
 
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-
-        padding:10px;
     }
     
-    .productName{
-        font-size: 1.5em;
+    .productTitle{
+        transform: translateY(-120px);
+        width: 100%;
+        height: 100px;
+        background-image:linear-gradient(to bottom, transparent 1%, var(--darkBackgroundTransparent) 20%);
+        padding:20px 0px 0px 0px;
     }
-    .productImage{
-        height:250px;
+    .productData{
+        margin-left:5px;
+        font-size: 2em;
+    }
+    .productPrice{
+        margin-left:5px;
+        margin-top:20px;
+        font-size: 1.9em;
+    }
+    .productImage, img{
+        height:100%;
         width: 100%;
         background-color:blue;
     }
