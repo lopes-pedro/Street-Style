@@ -120,6 +120,8 @@ h2.title{
         margin-right:5px;
         background-color:red;
 
+        overflow:hidden;
+
     }
     
     .productTitle{
@@ -128,6 +130,13 @@ h2.title{
         height: 100px;
         background-image:linear-gradient(to bottom, transparent 1%, var(--darkBackgroundTransparent) 20%);
         padding:20px 0px 0px 0px;
+        opacity:0;
+
+        transition:.2s;
+    }
+
+    .product:hover .productTitle{ 
+        opacity:1;
     }
     .productData{
         margin-left:5px;
@@ -141,7 +150,15 @@ h2.title{
     .productImage, img{
         height:100%;
         width: 100%;
-        background-color:blue;
+        inset:0;
+        object-fit: cover;
+        transform:scale(1);
+
+        transition:.75s;
+    }
+
+    .product:hover .productImage, img{
+        transform: scale(1.15);
     }
 
     #productListFooter{
