@@ -41,6 +41,10 @@ h2.title{
     padding:20px 0px 20px 0px;
 }
 
+.marginTop{
+    margin-top: 5px;
+}
+
 /* Itens */
 
 .itens{
@@ -55,7 +59,7 @@ h2.title{
     font-weight: 300;
 }
 
-.itens > li{
+.itens > a{
     padding:10px;
     margin-left:10px;
 
@@ -64,8 +68,10 @@ h2.title{
     transition: 0.3s;
 
     cursor: pointer;
+
+    text-decoration: none;
 }
-.itens > li:hover{
+.itens > a:hover{
     background-color:var(--lightBackgroundTransparent);
     border: 1px solid var(--lightBackground);
     border-radius: 3px;
@@ -95,8 +101,6 @@ h2.title{
     color:black;
 }
 
-
-
 /* Product List */
 #productList{
     display:flex;
@@ -121,11 +125,10 @@ h2.title{
         background-color:red;
 
         overflow:hidden;
-
     }
     
     .productTitle{
-        transform: translateY(-120px);
+        transform: translateY(-90px);
         width: 100%;
         height: 100px;
         background-image:linear-gradient(to bottom, transparent 1%, var(--darkBackgroundTransparent) 20%);
@@ -135,17 +138,21 @@ h2.title{
         transition:.2s;
     }
 
-    .product:hover .productTitle{ 
+    .product:hover .productTitle{
+        transform:translateY(-100x); 
         opacity:1;
     }
-    .productData{
+    .productData{     
         margin-left:5px;
-        font-size: 2em;
+        font-size: 1.1em;
+        letter-spacing: 2px;
+        font-weight: 700;
     }
     .productPrice{
         margin-left:5px;
-        margin-top:20px;
-        font-size: 1.9em;
+        margin-top:10px;
+        font-size: .9em;
+        font-weight: 500;
     }
     .productImage, img{
         height:100%;
@@ -243,4 +250,14 @@ h2.title{
 #pageFooter{
     max-width: 1000px;
     margin: 0 auto;
+}
+
+#footerContent{
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    justify-content: space-around;
 }
