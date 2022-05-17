@@ -1,0 +1,8 @@
+{"name": "street-style-api",
+    "main":"index.js",
+    "dependencies": 
+        {
+            "express":"4.8.*", 
+            "mongoose": "~3.6.13"
+        }
+}

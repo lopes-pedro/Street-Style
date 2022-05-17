@@ -59,7 +59,7 @@ h2.title{
     font-weight: 300;
 }
 
-.itens > a{
+.itens > .itenElement{
     padding:10px;
     margin-left:10px;
 
@@ -71,7 +71,7 @@ h2.title{
 
     text-decoration: none;
 }
-.itens > a:hover{
+.itens > .itenElement:hover{
     background-color:var(--lightBackgroundTransparent);
     border: 1px solid var(--lightBackground);
     border-radius: 3px;
