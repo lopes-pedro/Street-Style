@@ -1,15 +1,13 @@
 const req = async function (){
-    console.log("kkk")
     const res = await fetch("http://localhost:3000", {
-        acesscontrolalloworigin: 'off',
-        mode: 'cors',
-        credentials: 'include',
         method: 'get'
     });
-    console.log(res)
+    return await res.json();
 }
 
-window.addEventListener("load", ()=>{
-    console.log("kkk");
-    req();
+window.addEventListener("load", async ()=>{
+    const test = document.getElementById("test124");
+    const res = await req();
+    test.innerHTML = res[0].productName;
+    console.log(res);
 })

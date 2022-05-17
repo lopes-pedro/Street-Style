@@ -1,12 +1,20 @@
+const cors = require('cors');
 const express = require('express');
 const app = express();
 
-app.use({urlencoded:true})
+app.use(cors())
+
+//A linha acima funciona como um modo de permissão da CORS
 
 app.get("/", (req,res)=>{
     return res
+        .header('Access-Control-Allow-Origin', "*")
         .status(200)
-        .json({"ok":"ok"});
+        .json([
+            {
+                "productName":"Camisa roxa comum",
+            }
+        ]);
 })
 
 app.get("/t/", (req,res)=>{
