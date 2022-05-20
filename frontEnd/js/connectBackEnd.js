@@ -8,6 +8,6 @@ const req = async function (){
 window.addEventListener("load", async ()=>{
     const test = document.getElementById("test124");
     const res = await req();
-    test.innerHTML = res[0].productName;
+    test.innerHTML = res.productName;
     console.log(res);
 })

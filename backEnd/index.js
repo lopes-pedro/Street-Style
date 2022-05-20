@@ -1,27 +1,38 @@
-const cors = require('cors');
-const express = require('express');
-const app = express();
+//Import data
+    const cors = require('cors');
+    const express = require('express');
+    const app = express();
+    const mongoose = require('mongoose');
 
-app.use(cors())
+    const main = require('./routes/main');
 
-//A linha acima funciona como um modo de permissão da CORS
+// Config
+    // Mongoose
+    mongoose.Promise = global.Promise;
 
-app.get("/", (req,res)=>{
-    return res
-        .header('Access-Control-Allow-Origin', "*")
-        .status(200)
-        .json([
-            {
-                "productName":"Camisa roxa comum",
+        async function connect(){
+            try{
+                await mongoose.connect("mongodb://localhost/StreetStyle", {
+                    useNewUrlParser: true,
+                    useUnifiedTopology: true,
+                    useMongoClient:true
+                });
+                console.log("Database on!");
             }
-        ]);
-})
+            catch(err){
+                console.log("Error in open database: ", err);
+            }
+        }
+        connect();
+        
+//Cors permission
+    app.use(cors())
 
-app.get("/t/", (req,res)=>{
-    console.log("hmm");
-    next();
-})
+//Routes
+    app.use("/", main);
 
-app.listen(3000, ()=>{
-    console.log("Server open!");
-});
+//Server localhost:3000
+    const PORT = 3000;
+    app.listen(PORT, ()=>{
+        console.log("Server open!");
+    });
